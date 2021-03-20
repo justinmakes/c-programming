@@ -44,7 +44,7 @@ int condition1(int x, int y, int x_offset, int y_offset, int size2) {
 	}
 }
 
-int condition2(x, y, size1) {
+int condition2(int x, int y, int size1) {
 
       // check if EITHER
       //    x is less than size1 AND (y is either 0 or size1-1)
@@ -68,6 +68,9 @@ void printPound(int x, int y, int size1) {
 
 void squares(int size1, int x_offset, int y_offset, int size2) {
   //compute the max of size1 and (x_offset + size2).  Call this w
+	int w;
+	int h;
+
 	if (size1 > x_offset + size2) {
 		w = size1;
 	} else {
@@ -82,12 +85,12 @@ void squares(int size1, int x_offset, int y_offset, int size2) {
 	}
 
   //count from 0 to h. Call the number you count with y
-	for ( y = 0; y < h; y++ ) {
+	for ( int y = 0; y < h; y++ ) {
 		
-	}
+	
 
     //count from 0 to w. Call the number you count with x
-	for ( x = 0; x < w; x++ ) {
+	for ( int x = 0; x < w; x++ ) {
 
 
       //check if  EITHER
@@ -122,9 +125,13 @@ void squares(int size1, int x_offset, int y_offset, int size2) {
 		printSpace(x, y, size1);
 	}
 
-	}
-    //when you finish counting x from 0 to w, 
-    //print a newline
-    printf("\n");
+	}//end for loop (x)
+
+    	//when you finish counting x from 0 to w, 
+    	//print a newline
+    	printf("\n");
+
+
+	}//end for loop (y)
 
 }
