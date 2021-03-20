@@ -3,4 +3,3 @@ squares:
 
 clean:
 	rm squares
-	rm squares_test.o
