@@ -32,19 +32,19 @@ int isAtBorder(int coord, int offset, int size) {
 	}
 }
 
-void condition1(int x, int y, int x_offset, int y_offset, int size2) {
+int condition1(int x, int y, int x_offset, int y_offset, int size2) {
 
 	if ( (x >= x_offset && x < x_offset + size2) && (y == y_offset || y == y_offset + size2 - 1) ){
-		return true;
+		return 1;
 	}
 	else if ( (y >= y_offset && y < y_offset + size2) && (x == x_offset || x == x_offset + size2 - 1) ){
-		return true;
+		return 1;
 	} else {
-		return false;
+		return 0;
 	}
 }
 
-void condition2(x, y, size1) {
+int condition2(x, y, size1) {
 
       // check if EITHER
       //    x is less than size1 AND (y is either 0 or size1-1)
@@ -52,11 +52,11 @@ void condition2(x, y, size1) {
       //    y is less than size1 AND (x is either 0 or size1-1)
 
 	if ( x < size1 && (y == 0 || y == size1-1) ) {
-		return true;
+		return 1;
 	} else if (y < size1 && (x == 0 || x == size1-1)) {
-		return true;
+		return 1;
 	} else {
-		return false;
+		return 0;
 	}
 
 }
@@ -98,10 +98,10 @@ void squares(int size1, int x_offset, int y_offset, int size2) {
       //     x is equal to either x_offset OR x_offset + size2 -1)
       // if so, print a *
       
-	bool condition1=condition1(x, y, x_offset, y_offset, size2);
-	bool condition2=condition2(x, y, size1);
+	int condition1=condition1(x, y, x_offset, y_offset, size2);
+	int condition2=condition2(x, y, size1);
 
-	if (condition1 == true) {
+	if (condition1 == 1) {
 		printf("*");
 	}
 
