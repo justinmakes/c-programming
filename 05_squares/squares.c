@@ -69,7 +69,6 @@ void printPound(int x, int y, int size1) {
 void squares(int size1, int x_offset, int y_offset, int size2) {
   //compute the max of size1 and (x_offset + size2).  Call this w
 	int w;
-	int h;
 
 	if (size1 > x_offset + size2) {
 		w = size1;
@@ -78,6 +77,8 @@ void squares(int size1, int x_offset, int y_offset, int size2) {
 	}
 
   //compute the max of size1 and (y_offset + size2).  Call this h
+	int h;
+
 	if (size1 > y_offset + size2) {
 		h = size1;
 	} else {
@@ -101,8 +102,8 @@ void squares(int size1, int x_offset, int y_offset, int size2) {
       //     x is equal to either x_offset OR x_offset + size2 -1)
       // if so, print a *
       
-	int condition1=condition1(x, y, x_offset, y_offset, size2);
-	int condition2=condition2(x, y, size1);
+	int condition1 = condition1(x, y, x_offset, y_offset, size2);
+	int condition2 = condition2(x, y, size1);
 
 	if (condition1 == 1) {
 		printf("*");
@@ -116,7 +117,7 @@ void squares(int size1, int x_offset, int y_offset, int size2) {
       //    y is less than size1 AND (x is either 0 or size1-1)
       //if so, print a #
 
-	else if (condition2 == true) {
+	else if (condition2 == 1) {
 		printf("#");
 	}
 
