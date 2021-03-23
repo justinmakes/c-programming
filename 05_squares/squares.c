@@ -107,7 +107,7 @@ void squares(int size1, int x_offset, int y_offset, int size2) {
 	check1 = condition1(x, y, x_offset, y_offset, size2);
 	check2 = condition2(x, y, size1);
 
-	if (condition1 == 1) {
+	if (check1 == 1) {
 		printf("*");
 	}
 
@@ -119,7 +119,7 @@ void squares(int size1, int x_offset, int y_offset, int size2) {
       //    y is less than size1 AND (x is either 0 or size1-1)
       //if so, print a #
 
-	else if (condition2 == 1) {
+	else if (check2 == 1) {
 		printf("#");
 	}
 
