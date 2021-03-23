@@ -62,9 +62,10 @@ int condition2(int x, int y, int size1) {
 }
 
 void printPound(int x, int y, int size1) {
-	
-
 }
+
+//void printSpace(int x, int y, int size1) {
+//}
 
 void squares(int size1, int x_offset, int y_offset, int size2) {
   //compute the max of size1 and (x_offset + size2).  Call this w
@@ -125,7 +126,8 @@ void squares(int size1, int x_offset, int y_offset, int size2) {
 
       //else print a space
 	else {
-		printSpace(x, y, size1);
+		//printSpace(x, y, size1);
+		printf(" ");
 	}
 
 	}//end for loop (x)
