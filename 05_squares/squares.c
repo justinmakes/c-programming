@@ -104,8 +104,8 @@ void squares(int size1, int x_offset, int y_offset, int size2) {
       //     x is equal to either x_offset OR x_offset + size2 -1)
       // if so, print a *
       
-	condition1(x, y, x_offset, y_offset, size2);
-	condition2(x, y, size1);
+	condition1 = condition1(x, y, x_offset, y_offset, size2);
+	condition2 = condition2(x, y, size1);
 
 	if (condition1 == 1) {
 		printf("*");
